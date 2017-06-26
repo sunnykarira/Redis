@@ -1,0 +1,15 @@
+https://redis.io/topics/persistence
+
+Creating snapshot of data into disk
+SAVE
+
+SAVE 60 1000
+Save every 60 seconds if at least 1000 keys changed.
+
+This saved file is in a dump file.
+/var/lib/redis/dump.rdb
+
+Append only file
+Log every thing you do
+
+/etc/redis/redis.conf

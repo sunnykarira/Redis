@@ -1,0 +1,44 @@
+Open Source in memory data structure store which can be used as database
+or cache and message broker.
+
+No SQL key/value store
+
+Supports multiple Data structure.
+
+Built in Replication. (Master/Slave Replication)
+Slave to be exact copy of master.
+Master can have multiple slaves.
+Replication is done async. and master can perform queries when slaves are synchronizing.
+
+--------------------------------------------------------------------------------
+
+Redis DataTypes
+
+Strings
+Lists
+Sets
+Sorted Sets
+Hashes
+
+Bitmaps
+HyperLogs
+Geospatial Indexes
+
+----------------------------------------------------------------------------------
+
+---Advantages--- Mix of MongoDB and Memcached
+Very Flexible
+No Schemas & Col Names
+Very Fast: Can perform around 110,000 SETS per second and about 81,000 GETs per second
+Rich Datatype Supports
+Caching and Disk Persistence
+
+---Redis and Security---
+
+Designed to accessed by trusted clients.
+Do not allow external access / Internet Exposure
+Simple authentication can be set up
+Can be restricted to certain intefaces
+Data encryption not supported.
+
+

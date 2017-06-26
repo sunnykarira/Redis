@@ -1,0 +1,93 @@
+Refer https://redis.io/topics/data-types
+
+------Lists-----
+Works like queue, sorted by insertion order.
+
+--Pushing from left and right in the list--
+LPUSH people "Tom" 
+RPUSH people "Jen"
+
+
+--Getting values in list in a range"
+LRANGE people 0 -1  --Gives all
+LRANGE people 1 2
+
+--Getting length of the list--
+LLEN people
+
+--Popping from left and right--
+LPOP people
+RPOP people
+
+--Insert in the middle--
+LINSERT people BEFORE "Brad" "YO"
+
+
+-----Sets---
+
+--Adding to set--
+SADD cars "Ford"
+SADD cars "Honda"
+SADD cars "BMW"
+
+--Checking if exist in sets--
+SISMEMBER cars "Ford"
+
+--Get all members of the set--
+SMEMBERS cars
+
+--How many elements are there in set--
+SCARD cars
+
+--Move elements from one set to another set--
+SMOVE cars mycars "Ford"
+
+--Remove a member from set--
+SREM cars "BMW"
+
+
+------Sorted Sets----------
+ZADD users 1981 "Brad Traversy"
+ZADD users 1975 "John Doe"
+ZADD users 1990 "Mike Smith"
+ZADD users 1990 "Kate Rogers"
+
+---Return the rank of a member---
+ZRANK people "Mike Smith"
+
+--Get all of the members in the sorted set---
+ZRANGE users 0 -1
+
+-- Increment score of certain ker/value--
+ZINCRBY users 10 "John Doe"
+
+
+----Hashes------
+--Adding key value to a hash--
+HSET user:brad name "Brad Traversy"
+HSET user:brad email "brad@gmail.com"
+
+--Getting values--
+HGET user:brad name
+HGET user:brad email
+HGETALL user:brad
+
+--Setting multiple values--
+ HMSET user:john name "John Doe" email "jdoe@gmail.com" age 25
+ HGETALL user:john
+
+ --Getting keys and values--
+ HKEYS user:john
+ HVALS user:john
+
+ --Increment--
+ HINCRBY user:john age 1
+
+ --Delete Values--
+ HDEL user:john age
+
+ --Getting hash len--
+ HLEN user:john
+
+
+

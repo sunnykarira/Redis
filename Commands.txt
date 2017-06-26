@@ -1,0 +1,57 @@
+sudo apt-get install redis-server
+
+redis-cli
+
+To check if there is a connection
+ping
+
+Echo a string
+ECHO 'Hello World'
+
+Close the connection
+QUIT
+
+--GET and SET--
+SET foo 100
+GET foo
+
+--INCREMENT NUMBER--
+INCR foo
+DECR foo
+
+-- Something Exists or not --
+EXISTS foo
+
+-- Delete --
+DEL bar
+
+-- Clear Everything out--
+FLUSHALL
+
+-- SET KEYSPACES --
+SET server:name someserver
+SET server:port 8000
+
+--Can let store values that will destroy themselves after certain time--
+SET greeting "Hello World"
+EXPIRE greeting 50
+TTL greeting
+
+--Setting expiration along with SET--
+SETEX greeting 30 "Hello World"
+
+--Let to store again when time counting down--
+PERSIST greeting
+
+-- Setting multiple key value pairs--
+MSET key1 "hello" key2 "world"
+
+--Appending keys with some values--
+APPEND key1 " World"
+GET key1
+
+--Rename keys--
+RENAME key1 greeting
+
+
+
