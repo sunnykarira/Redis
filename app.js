@@ -13,7 +13,7 @@ client.on('connect', function(){
 });
 
 //Set Port
-const port = 3000 || process.env.port;
+const port = 3000 || process.env.PORT;
 
 //Init App
 const app = express();
